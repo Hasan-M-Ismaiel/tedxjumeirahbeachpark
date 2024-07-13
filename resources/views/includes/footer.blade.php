@@ -42,7 +42,7 @@
                                     <li><a href="{{ route('sponsers') }}">Sponsors</a></li>
                                     <li><a href="{{ route('register') }}">join us as Speaker</a></li>
                                     <li><a href="{{ route('volunteer') }}">join us as Volunteer</a></li>-->
-                                    <li><a href="{{ route('aboutTed') }}">about TED</a></li>
+                                    <li><a href="{{ route('main') }}#about">about TED</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->

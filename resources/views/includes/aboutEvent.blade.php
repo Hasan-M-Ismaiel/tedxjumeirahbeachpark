@@ -2,37 +2,80 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-12 wow fadeIn" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                <div class="about-image">
-                    <div class="video-head wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                        <a href="https://www.youtube.com/watch?v=wKZoBIdMMA0" class="glightbox video"><i class="lni lni-play"></i></a>
-                    </div>
-                    <img src="{{ asset('assets_main/assets/images/about/about-image.jpg') }}" alt="#">
-                </div>
+                <!-- <div class="about-image"> -->
+                    <!-- <div class="video-head wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;"> -->
+                        <!-- <a href="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" class="glightbox video"><i class="lni lni-play"></i></a> -->
+                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="glightbox video"><i class="lni lni-play"></i></iframe> -->
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!-- </div> -->
+                    <!-- <img src="{{ asset('assets_main/assets/images/about/about-image.jpg') }}" alt="#"> -->
+                <!-- </div> -->
             </div>
             <div class="col-lg-6 col-12 wow fadeIn" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
                 <div class="content">
-                    <h4>Get Experience</h4>
-                    <h2>About The Event</h2>
+                    <h2 class="mb-3">Why Dubai?</h2>
 
-                    <h4 class="mt-2"><strong> Your Potential at TEDxJumeirah: Where Ideas Take Flight</strong></h4>
-                    <ul style="all: revert;">
-                        <li>
-                            Immerse yourself in a day of inspiration and innovation at TEDxJumeirah, set against the stunning backdrop of Jumeirah Beach Park in Dubai, UAE. This independent TEDx event brings together a diverse range of brilliant minds to share ideas that spark conversation and ignite change.
-                        </li>
-                    </ul>
-
-                    <h4 class="mt-2"><strong> Here's what awaits you at TEDxJumeirah:</strong></h4>
-                    <ul style="all: revert;">
-                        <li style="all: revert;"><strong>Captivating Talks:</strong> Witness thought leaders, innovators, and local heroes deliver impactful talks on a variety of themes.</li>
-                        <li style="all: revert;"><strong>Spark for Change:</strong>Be inspired by fresh perspectives and ignite your own potential to make a difference.</li>
-                        <li style="all: revert;"><strong>A Community of Passionate Minds:</strong>Connect with fellow idea enthusiasts, engage in stimulating discussions, and forge meaningful connections.</li>
-                        <li style="all: revert;"><strong>Jumeirah Beach Setting:</strong>Experience the magic of TEDx under the Dubai sun, with the iconic Jumeirah Beach Park as your backdrop.</li>
-                    </ul>
-
-                    <h4 class="mt-2"><strong> Join us at TEDxJumeirah and be a part of something extraordinary!</strong></h4>
-
-                    <div class="date">
-                        <h4><span>24th</span> November’ 2024</h4>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" style="background-color: white;">
+                                <button class="accordion-button text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong>Global Melting Pot</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong class="text-white">Dubai’s diverse population from over 200 nationalities makes it an ideal platform for rich, global dialogues and a wide array of perspectives at a TEDx event. </strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" style="background-color: white;">
+                                <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong>Innovation Hub</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong class="text-white">As a forefront of technological and architectural innovation, Dubai offers a stage to highlight and discuss groundbreaking advancements, from robotics to sustainable urban planning</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" style="background-color: white;">
+                                <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <strong>Strategic Location</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong class="text-white">Dubai’s position as a global crossroads and its top-tier infrastructure make it a perfect venue for attracting an international audience, enhancing the event’s reach and impact</strong> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" style="background-color: white;">
+                                <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <strong>Entrepreneurial Spirit</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong class="text-white">With its thriving start-up ecosystem and business-friendly environment, Dubai is a prime location to feature local entrepreneurs and foster professional networks and collaboration.</strong> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" style="background-color: white;">
+                                <button class="accordion-button collapsed text-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <strong>Cultural Richness</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong class="text-white">The city’s blend of modern luxury and traditional Emirati culture provides a unique backdrop, enriching the TEDx experience with local heritage and contemporary achievements.</strong> 
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

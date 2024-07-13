@@ -20,7 +20,7 @@
                     <h1 class="page-title">Be With Us</h1>
                     <ul class="breadcrumb-nav">
                         <li><a href="index.html">Home</a></li>
-                        <li>Register</li>
+                        <li>Speaker</li>
                     </ul>
                 </div>
             </div>
@@ -35,16 +35,26 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">Why join event?</h3>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Why you should Join Event</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">Ready to take the stage? Be a TEDx speaker, Make your voice heard. <u>Inspire the world</u>.</p>
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">Ready to take the stage?</h3>
+                    <!-- <h2 class="wow fadeInUp" data-wow-delay=".4s">If you want to be a speaker who will give a powerful talk that foster the love of learning in the audience, then don’t miss this opportunity!
+                        A TEDx talk should center on an idea.
+                    </h2> -->
+                    <p class="wow fadeInUp" data-wow-delay=".6s">
+                    If you want to be a speaker who will give a powerful talk that foster the love of learning in the audience, then don’t miss this opportunity!
+                    A TEDx talk should center on an idea.
+                    </p>
+                    <br>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">A great, well-formed idea can be one of two things: it can be something that’s new and surprising; an idea or invention that the audience has never heard about or it can be a great basic idea (that the audience has maybe already heard) with a compelling new argument behind it that challenges beliefs and perspectives.
+                    </p>
+                    <br>
+                    <strong>Be a TEDx speaker and inspire the world!</strong>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="section-title">
-                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank">here</a>. We will be happy &#128525; joining us</p>
+                <div class="section-title mb-0">
+                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank" class="text-danger">here</a>. We will be happy &#128525; joining us</p>
                 </div>
             </div>
         </div>
@@ -195,10 +205,10 @@
 
 
                                 <!--video-->
-                                 <label class="d-block mb-4">
-                                    <span class="form-label d-block"><strong>It is better to record a video answering the previous questions - 3 min at max ~  من الأفضل أن تقوم بتسجيل فديو قصير تجيب من خلاله على الأسئلة السابقة - مدة الفديو حد أقصى 3 دقائق</strong> </span>
+                                <label class="d-block mb-4">
+                                    <span class="form-label d-block"><strong>It is better to record a video answering the previous questions - 3 min at max ~ من الأفضل أن تقوم بتسجيل فديو قصير تجيب من خلاله على الأسئلة السابقة - مدة الفديو حد أقصى 3 دقائق</strong> </span>
                                     <input name="video" type="file" class="form-control" value="{{ old('video') }}">
-                                </label> 
+                                </label>
 
                                 <!--idea message-->
                                 <label class="d-block mb-4">
@@ -236,7 +246,7 @@
 
                                 <!--notes-->
                                 <label class="d-block mb-4">
-                                    <span class="form-label d-block"><strong>Please add any notes or comments? ~ الرجاء إضافة أية ملاحظات أو تعليقات  </strong></span>
+                                    <span class="form-label d-block"><strong>Please add any notes or comments? ~ الرجاء إضافة أية ملاحظات أو تعليقات </strong></span>
                                     <textarea rows="4" cols="50" name="question_10" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_10') }}"></textarea>
                                 </label>
                             </div>

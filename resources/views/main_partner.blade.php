@@ -35,17 +35,25 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">Why join event?</h3>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Why you should Join Event</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">Ready to take the stage? Be a TEDx partner, let's do it together & . <u>Inspire the world</u>.</p>
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">Be our partner</h3>
+                    <!-- <h2 class="wow fadeInUp" data-wow-delay=".4s">partners who share our vision of spreading inspiring ideas and fostering community engagement. Whether you're a business, organization, or individual passionate about innovation and education, we welcome you to join us on this journey. </h2> -->
+                    <!-- <p class="wow fadeInUp" data-wow-delay=".6s"><strong>Let's collaborate to bring innovative ideas to life and make an impact in our community!</strnog></p> -->
+                    <p class="wow fadeInUp" data-wow-delay=".6s">
+                    Let’s spread inspiring ideas and foster community engagement together. Whether you're a business, organization, or individual passionate about innovation and education, we welcome you to join us on this journey.
+                    </p>
+                    <br>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">Let's collaborate to bring innovative ideas to life and make an impact in our community!
+                    </p>
+                    <br>
+                    <!-- <strong>Be a TEDx speaker and inspire the world!</strong> -->
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12">
-                <div class="section-title">
-                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank">here</a>. We will be happy &#128525; joining us</p>
+                <div class="section-title mb-0">
+                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank" class="text-danger">here</a>. We will be happy &#128525; joining us</p>
                 </div>
             </div>
         </div>
@@ -234,7 +242,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="service_2" name="services[]" value="Web Development">
                                         <label class="form-check-label" for="flexCheckDefault">
-                                            Web Development ~ تطوير مواقع الويب 
+                                            Web Development ~ تطوير مواقع الويب
                                         </label>
                                     </div>
 

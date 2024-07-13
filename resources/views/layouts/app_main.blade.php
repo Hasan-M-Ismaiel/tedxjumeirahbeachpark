@@ -7,7 +7,7 @@
     <title>TEDx JumierahBeachPark</title>
     <meta name="description" content="JumierahBeachPark, TED, TEDx, talk, event, conference, UAE, dubai, jumeirah, park" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets_main/assets/icons/TED.png') }}" />
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets_main/assets/icons/TED.png') }}" /> -->
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('assets_main/assets/css/bootstrap.min.css') }}" />
@@ -22,13 +22,19 @@
 
 <body>
     <!-- Preloader -->
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="preloader-inner">
             <div class="preloader-icon">
                 <span></span>
                 <span></span>
             </div>
         </div>
+    </div> -->
+    <!-- /End Preloader -->
+
+     <!-- Preloader -->
+     <div id="preloaderted">
+        
     </div>
     <!-- /End Preloader -->
 
@@ -200,6 +206,12 @@
             //... and adds the "active" class on the current step:
             x[n].className += " active";
         }
+    </script>
+    <script>
+        var loader = document.getElementById('preloaderted');
+        window.addEventListener("load", function(){
+            loader.style.display='none';
+        });
     </script>
     <!--for the sweet alert-->
     @include('sweetalert::alert')

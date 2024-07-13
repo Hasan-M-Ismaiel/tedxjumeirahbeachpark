@@ -32,7 +32,7 @@
 <!-- Start Features Area -->
 <section class="features section">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="section-title">
                     <h3 class="wow zoomIn" data-wow-delay=".2s">Why join event?</h3>
@@ -40,11 +40,11 @@
                     <p class="wow fadeInUp" data-wow-delay=".6s">Ready to take the stage? Be a TEDx participant, let's do it together & . <u>Inspire the world</u>.</p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-12">
-                <div class="section-title">
-                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank">here</a>. We will be happy &#128525; joining us</p>
+                <div class="section-title mb-0">
+                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank" class="text-danger">here</a>. We will be happy &#128525; joining us</p>
                 </div>
             </div>
         </div>

@@ -35,17 +35,25 @@
         <div class="row">
             <div class="col-12">
                 <div class="section-title">
-                    <h3 class="wow zoomIn" data-wow-delay=".2s">Why join us?</h3>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Your skills can make TEDx shine.</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".6s">Make a difference & Be the <u>spark</u> behind the stage.</p>
+                    <h3 class="wow zoomIn" data-wow-delay=".2s">We are looking for</h3>
+                    <!-- <h2 class="wow fadeInUp" data-wow-delay=".4s">volunteers who can take ownership of certain primary tasks. They should have both the skills and the bandwidth to fulfill their role. They should be organized, self-managed and hard-working individuals.
+                    </h2> -->
+                    <p class="wow fadeInUp" data-wow-delay=".6s">
+                        Volunteers with us and take ownership of certain primary tasks. We believe you have both the skills and the bandwidth to fulfill your role.
+                    </p>
+                    <br>
+                    <p class="wow fadeInUp" data-wow-delay=".6s">If you are an organized, self-managed, and hard-working individual, apply now to make a difference and spark behind the stage!
+                    </p>
+                    <br>
+                    <!-- <strong>Be a TEDx speaker and inspire the world!</strong> -->
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12">
-                <div class="section-title">
-                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank">here</a>. We will be happy &#128525; joining us</p>
+                <div class="section-title mb-0">
+                    <p class="wow fadeInUp" data-wow-delay=".6s">If you want to join us as a tedx hero, please fill in this form. click <a href="https://docs.google.com/forms/d/e/1FAIpQLSejQOA4LndYfm7C_NRiXXx7-TanEGo0IuxDgRQWF-bde4FeKw/viewform" target="_blank" class="text-danger">here</a>. We will be happy &#128525; joining us</p>
                 </div>
             </div>
         </div>
@@ -152,7 +160,7 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="question_1" id="question_1_yes" value="yes" checked>
                                             <label class="form-check-label" for="question_1_yes">
-                                                yes ~ نعم 
+                                                yes ~ نعم
                                             </label>
                                         </div>
 
@@ -166,7 +174,7 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="question_1" id="question_1_not_sure" value="not sure">
                                             <label class="form-check-label" for="question_1_not_sure">
-                                                not sure ~ لست متأكداً 
+                                                not sure ~ لست متأكداً
                                             </label>
                                         </div>
                                     </div>
@@ -183,7 +191,7 @@
 
                                 <!--hours-->
                                 <label class="d-block mb-4">
-                                    <span class="form-label d-block"><span class="me-2 text-danger">.</span><strong>How many hours can you contribute per week? ~  كم عدد الساعات التي يمكنك المساهمة فيها أسبوعياً؟</strong></span>
+                                    <span class="form-label d-block"><span class="me-2 text-danger">.</span><strong>How many hours can you contribute per week? ~ كم عدد الساعات التي يمكنك المساهمة فيها أسبوعياً؟</strong></span>
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="question_3" id="question_1_2" value="2" checked>
@@ -194,7 +202,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="question_3" id="question_1_4" value="4">
                                         <label class="form-check-label" for="question_1_4">
-                                            4h ~  أربع ساعات
+                                            4h ~ أربع ساعات
                                         </label>
                                     </div>
                                     <div class="form-check">
@@ -371,10 +379,10 @@
 
                                 <!--video-->
                                 <label class="d-block mb-4">
-                                    <span class="form-label d-block"><strong>It is better to record a video answering the previous questions (2 min) max. ~  من الأفضل أن تقوم بتسجيل فديو قصير تجيب من خلاله عن الأسئلة السابقة بشرط ألا يتجاوز دقيقتان </strong> </span>
+                                    <span class="form-label d-block"><strong>It is better to record a video answering the previous questions (2 min) max. ~ من الأفضل أن تقوم بتسجيل فديو قصير تجيب من خلاله عن الأسئلة السابقة بشرط ألا يتجاوز دقيقتان </strong> </span>
                                     <input name="video" type="file" class="form-control" value="{{ old('video') }}">
-                                </label> 
-                                
+                                </label>
+
                             </div>
 
                             <!-- step three -->
