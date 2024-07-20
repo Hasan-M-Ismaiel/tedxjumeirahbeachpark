@@ -12,7 +12,7 @@
                                         <img src="{{ asset('assets_main/assets/images/logo/logo-black.png') }}" alt="#">
                                     </a>
                                 </div>
-                                <p>This independent TEDx event is operated under license from TED.</p>
+                                <p>This independent TEDx event is operated under a license from TED.</p>
                                 <span class="social-title">
                                     Follow Us On:
                                 </span>
@@ -42,7 +42,7 @@
                                     <li><a href="{{ route('sponsers') }}">Sponsors</a></li>
                                     <li><a href="{{ route('register') }}">join us as Speaker</a></li>
                                     <li><a href="{{ route('volunteer') }}">join us as Volunteer</a></li>-->
-                                    <li><a href="{{ route('main') }}#about">about TED</a></li>
+                                    <li><a href="{{ route('aboutTed') }}">About TED</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
@@ -50,11 +50,12 @@
                         <div class="col-lg-4 col-md-6 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
-                                <h3>Know More</h3>
+                                <h3>Contact US</h3>
                                 <ul>
                                     <!--<li><a href="{{ route('about') }}">About Us</a></li>-->
                                     <!--<li><a href="{{ route('faq') }}">Faq</a></li>-->
-                                    <li>Contact Us <u>+971-50-772-8672</u></li>
+                                    <li> <strong>Mobile: </strong><u>+971-50-772-8672</u></li>
+                                    <li><strong>Email: </strong><u><a href= "mailto: support@tedxjumeirahbeachpark.com"> support@tedxjumeirahbeachpark.com </a></u></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->

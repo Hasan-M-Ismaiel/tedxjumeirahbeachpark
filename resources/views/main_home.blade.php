@@ -16,20 +16,18 @@
     <div class="main__circle2"></div>
     <div class="main__circle3"></div>
     <div class="main__circle4"></div>
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+    <div class="container d-flex justify-content-start">
+        <div class="row ">
+            <div class="col-lg-12 offset-lg-12 col-md-12 col-12">
                 <div class="hero-content">
-                    <h5 class="wow zoomIn" data-wow-delay=".2s"><i class="lni lni-map-marker"></i> Dubai,
-                        UAE</h5>
                     <h2 class="wow fadeInUp" data-wow-delay=".4s">
                         Beauty of Diversity
                     </h2>
-                    <!-- <p class="wow fadeInUp" data-wow-delay=".6s">to promote creative ideas worth spreading
-                    </p> -->
-                    <!-- <div class="button wow fadeInUp" data-wow-delay=".8s">
-                        <a href="#" class="btn ">November 24, 2024</a>
-                    </div> -->
+                    <p class="wow fadeInUp" style="font-size: 20px;" data-wow-delay=".6s">Golden Ratio’s Hidden Patterns
+                    </p>
+                    <h5 class="wow zoomIn" data-wow-delay=".2s"><i class="lni lni-map-marker"></i> Dubai,
+                        UAE
+                    </h5>
                 </div>
             </div>
         </div>
@@ -69,30 +67,42 @@
 </div> -->
 <!-- End Count Down Area -->
 
+<!-- Start Features Area -->
+@include('includes.features_area')
+<!-- /End Features Area -->
+
+
+
+<div style="background-color: #F4F7FA;" class="pt-3">
+    <div class="">
+        <video id="myvideo" width="100%" height="auto" controls poster="{{ asset('assets_main/assets/images/poster_video.png') }}">
+            <source src="{{ asset('assets_main/assets/hero_video/promo.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
 <div class="row mt-5">
     <div class="col-12">
-        <div class="section-title">
-            <a class="navbar-brand" href="{{ route('main') }}">
-                <img src="{{ asset('assets_main/assets/images/logo/logo-black.png') }}" style="width:auto; height:50" alt="Logo">
-            </a>
-            <p class="wow fadeInUp" data-wow-delay=".6s">Is an Independently Organized <span class="text-danger">TED</span> Event.</p>
-            <h3 class="wow zoomIn mt-4" data-wow-delay=".2s"><a href="{{ route('main') }}#about">learn more</a></h3>
+        <div class="section-title row">
+            <div class="col-lg-6  col-md-8 col-12 border-end">
+                <a class="navbar-brand" href="{{ route('main') }}">
+                    <img src="{{ asset('assets_main/assets/images/logo/logo-black.png') }}" style="width:500px; height:auto" alt="Logo">
+                </a>
+            </div>
+            <div class="col-lg-6  col-md-4 col-12 d-flex  align-items-center justify-content-center">
+                <p class="wow fadeInUp" data-wow-delay=".6s">Is an Independently Organized
+                    <span class="text-danger">TED</span> Event.
+                </p>
+                <!-- <br> -->
+                <!-- <h3 class="wow zoomIn mt-4" data-wow-delay=".2s"><a href="{{ route('aboutTed') }}">learn more</a></h3> -->
+            </div>
         </div>
     </div>
 </div>
 
-<div class="about_video section">
-    <div class="container mb-5  d-flex  align-items-center justify-content-center min-vh-100">
-        <video width="75%" height="auto" controls autoplay loop >
-            <source src="{{ asset('assets_main/assets/hero_video/promo.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-         </video>
-    </div>
-</div>
+@include('includes.about_ted_main')
 
-<!-- Start Features Area -->
-@include('includes.features_area')
-<!-- /End Features Area -->
 
 <!-- Start about Area -->
 @include('includes.aboutEvent')
@@ -107,61 +117,14 @@
 <!-- End Sponsors Area -->
 
 <!-- Start members Table Area -->
-@include('includes.members')
+
 <!--/ End Pricing Table Area -->
 
 <!-- Start Testimonials Section -->
 
 <!-- /End Testimonials Section -->
 
-<!-- Start Call Action Area -->
-<section id="about" class="call-action_main ">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                <div class="inner-content">
-                    <div class="text">
-                        <!-- <h5 class="wow zoomIn" data-wow-delay=".2s">Tell me more about TED & TEDx</h5> -->
-                        <div class="container">
-                            <div class="row mt-1 pt-3">
-                                <div class="row">
-                                    <!-- <div class="section-title"> -->
-                                    <h2 class="wow fadeInUp" data-wow-delay=".4s">About TED</h2>
-                                    <p class="wow fadeInUp" data-wow-delay=".6s"><strong class="text-danger">TED</strong> is a nonprofit organization devoted to Ideas Worth
-                                        Spreading, started in the United States in 1984 as a conference where Technology, Entertainment and Design converged.
-                                    </p>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay=".6s">Today TED is an annual conference and it covers almost all topics — from science to business to global issues. TED believes passionately in the power of ideas to change the world. At TED, the world's leading thinkers and doers are asked to give the talk of their lives in 18 minutes. Talks are then made available, free, at TED.com.</p>
-                                    <!-- </div> -->
-                                </div>
-                                <div class="row mt-5 border-top pt-5">
-                                    <!-- <div class="section-title"> -->
-                                    <h2 class="wow fadeInUp" data-wow-delay=".4s">About TEDx</h2>
-                                    <p class="wow fadeInUp" data-wow-delay=".6s">In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. </p>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay=".6s">These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).</p>
-                                    <br>
-                                    <p class="wow fadeInUp" data-wow-delay=".6s"><strong class="text-danger">x </strong> = independently organized event</p>
 
-                                    <!-- </div> -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <h2 class="wow fadeInUp" data-wow-delay=".4s">About TEDx
-                        </h2>
-                        <p class="wow fadeInUp" data-wow-delay=".6s">In the spirit of ideas worth spreading, TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TEDTalks video and live speakers combine to spark deep discussion and connection in a small group. These local, self-organized events are branded TEDx, where x = independently organized TED event. The TED Conference provides general guidance for the TEDx program, but individual TEDx events are self-organized (subject to certain rules and regulations).
-                            x = independently organized event
-                        </p> -->
-                    </div>
-                    <div class="button wow fadeInUp" data-wow-delay=".8s">
-                        <a href="https://www.ted.com/about/programs-initiatives/tedx-program" target="_blank" class="btn">TEDx program</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Call Action Area -->
 
 <!--countdown timer-->
 <!-- <script>
@@ -197,5 +160,22 @@
         // }
     }, 1000);
 </script> -->
-
+<script>
+    let video = document.querySelector('video');
+    let isPaused = false;
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio != 1 && !video.paused) {
+                video.pause();
+                isPaused = true;
+            } else if (isPaused) {
+                video.play();
+                isPaused = false
+            }
+        });
+    }, {
+        threshold: 1
+    });
+    observer.observe(video);
+</script>
 @endsection

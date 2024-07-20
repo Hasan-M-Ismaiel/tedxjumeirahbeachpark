@@ -1,11 +1,11 @@
-<section class="features section">
+<section class="features section pb-0 mb-0">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4 col-md-12 col-12">
+            <div class="col-lg-4 col-md-12 col-12 d-flex  align-items-center justify-content-center">
                 <!-- <img src="{{ asset('assets_main/assets/images/logo/logo-black.png') }}" alt="Logo"> -->
-                <img src="{{ asset('assets_main/assets/images/122.png') }}" alt="Logo">
+                <img src="{{ asset('assets_main/assets/images/122.png') }}"style="width:400px; height:auto" alt="Logo">
             </div>
-            <div class="col-lg-8 col-md-12 col-12">
+            <div class="col-lg-8 col-md-12 col-12 pt-5 ">
                 <!-- <div class="section-title"> -->
                 <h6 class="wow zoomIn" data-wow-delay=".2s">Our theme</h6>
                 <h2 class="wow fadeInUp" data-wow-delay=".4s">Beauty of Diversity: Golden Ratio’s Hidden Patterns</h2>

@@ -19,7 +19,7 @@
                 <div class="breadcrumbs-content">
                     <h1 class="page-title">About Us</h1>
                     <ul class="breadcrumb-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ route('main') }}">Home</a></li>
                         <li>About Us</li>
                     </ul>
                 </div>

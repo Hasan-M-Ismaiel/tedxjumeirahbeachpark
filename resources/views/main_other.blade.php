@@ -19,7 +19,7 @@
                 <div class="breadcrumbs-content">
                     <h1 class="page-title">Be With Us</h1>
                     <ul class="breadcrumb-nav">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{{ route('main') }}">Home</a></li>
                         <li>Other role</li>
                     </ul>
                 </div>

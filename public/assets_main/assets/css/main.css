@@ -2992,12 +2992,13 @@ ol {
     Call To Action CSS
 ========================================*/
 .call-action_main {
-  background-image: url("../images/call-action/call-bg_main.png");
+  /* background-image: url("../images/call-action/call-bg_main.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 120px 0;
   text-align: start;
+  background-color: #F4F7FA;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3066,7 +3067,7 @@ ol {
 }
 
 .call-action_main.overlay::before {
-  /* background: linear-gradient(45deg, #000000, #ff0024); */
+  /* background: linear-gradient(45deg, #000000, #000000); */
   opacity: 0.6;
 }
 
@@ -3087,11 +3088,11 @@ ol {
 }
 
 .call-action_main .text h5 {
-  color: #fff;
+  color: #0e0000;
   margin-bottom: 20px;
   font-size: 17px;
   display: inline-block;
-  border: 2px solid #fff;
+  border: 2px solid #050505;
   padding: 8px 25px;
   border-radius: 30px;
 }
@@ -3100,7 +3101,7 @@ ol {
   font-size: 37px;
   font-weight: 700;
   line-height: 45px;
-  color: #fff;
+  color: #000000;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -3118,7 +3119,7 @@ ol {
 }
 
 .call-action_main .text p {
-  color: #fff;
+  color: #0a0909;
   font-size: 16px;
   font-weight: 400;
   margin-top: 20px;
@@ -3130,7 +3131,7 @@ ol {
 }
 
 .call-action_main .button .btn {
-  background-color: #fff;
+  background-color: #070606;
   color: #101130;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3150,7 +3151,7 @@ ol {
 
 .call-action_main .button .btn:hover {
   background-color: #ff0024;
-  color: #fff;
+  color: #080808;
 }
 
 .call-action_main .button .btn.btn-alt:hover {
@@ -3426,7 +3427,7 @@ ol {
 .about_video {
   position: relative;
   background-color: #101130;
-  background-image: url("../images/about/about-png-video.jpg");
+  /* background-image: url("../images/about/about-png-video.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
@@ -3838,10 +3839,12 @@ ol {
 	Mmbers Table CSS
 ===============================*/
 .pricing-table {
-  background-image: url("../images/members/members.png");
+  /* background-image: url("../images/members/members.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #F4F7FA;
+
 }
 
 .pricing-table.extra-page {

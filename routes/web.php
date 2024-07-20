@@ -34,15 +34,24 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [MainHomeController::class, 'main'])->name('main');
-Route::get('/about', [MainHomeController::class, 'about'])->name('about');
 Route::get('/aboutTed', [MainHomeController::class, 'aboutTed'])->name('aboutTed');
-Route::get('/faq', [MainHomeController::class, 'faq'])->name('faq');
-Route::get('/sponsers', [MainHomeController::class, 'sponsers'])->name('sponsers');
+Route::get('/members', [MainHomeController::class, 'members'])->name('members');
+
 
 Route::get('/register', [MainHomeController::class, 'register'])->name('register');
 Route::get('/partner', [MainHomeController::class, 'partner'])->name('partner');
 Route::get('/volunteer', [MainHomeController::class, 'volunteer'])->name('volunteer');
-Route::get('/other', [MainHomeController::class, 'other'])->name('other');
+
+Route::get('/register_form', [MainHomeController::class, 'register_form'])->name('register_form');
+Route::get('/partner_form', [MainHomeController::class, 'partner_form'])->name('partner_form');
+Route::get('/volunteer_form', [MainHomeController::class, 'volunteer_form'])->name('volunteer_form');
+
+
+// Route::get('/other', [MainHomeController::class, 'other'])->name('other');
+
+Route::get('/faq', [MainHomeController::class, 'faq'])->name('faq');
+Route::get('/sponsers', [MainHomeController::class, 'sponsers'])->name('sponsers');
+Route::get('/about', [MainHomeController::class, 'about'])->name('about');
 
 Route::post('/storeRegister', [StoreFormInformationController::class, 'storeRegister'])->name('storeRegister');
 Route::post('/storePartner', [StoreFormInformationController::class, 'storePartner'])->name('storePartner');

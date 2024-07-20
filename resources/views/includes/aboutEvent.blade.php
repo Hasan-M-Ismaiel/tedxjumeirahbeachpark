@@ -6,7 +6,7 @@
                     <!-- <div class="video-head wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;"> -->
                         <!-- <a href="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" class="glightbox video"><i class="lni lni-play"></i></a> -->
                         <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="glightbox video"><i class="lni lni-play"></i></iframe> -->
-                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <!-- </div> -->
                     <!-- <img src="{{ asset('assets_main/assets/images/about/about-image.jpg') }}" alt="#"> -->
                 <!-- </div> -->

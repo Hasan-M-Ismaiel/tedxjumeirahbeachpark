@@ -39,6 +39,20 @@ class MainHomeController extends Controller
         //return view('main_aboutus');
     }
 
+    public function members ()
+    {
+        //$events = Event::with('speakers', 'sponsers', 'registers', 'members', 'volunteers')->get();
+        //$event = $events->first();
+        //return view('main_aboutus', [
+          //  'event' => $event,
+        //]);
+        $events = Event::all();
+        $event = $events->first();
+        return view('main_members',['event' => $event]);
+        
+        //return view('main_aboutus');
+    }
+
     public function sponsers ()
     {
         //$events = Event::with('speakers', 'sponsers', 'registers', 'members', 'volunteers')->get();
@@ -120,4 +134,33 @@ class MainHomeController extends Controller
             'event' => $event, 
         ]);
     }
+
+
+    public function register_form ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('register_form', [
+            'event' => $event,
+        ]);
+    }
+
+    public function partner_form ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('partner_form', [
+            'event' => $event,
+        ]);
+    }
+
+    public function volunteer_form ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('volunteer_form', [
+            'event' => $event,
+        ]);
+    }
+
 }
