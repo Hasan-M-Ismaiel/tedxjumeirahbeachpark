@@ -42,7 +42,7 @@
                 <!-- <div class="section-title"> -->
                 <!-- <h6 class="wow zoomIn" data-wow-delay=".2s">Our theme</h6> -->
                  <div>
-                     <h2 class="wow fadeInUp" data-wow-delay=".4s"><span class="text-danger">TEDx</span> <span class="display-6">Jumeirahbeachpark </span></h2>
+                     <h2 class="wow fadeInUp" data-wow-delay=".4s"><span class="text-danger">TEDx</span> <span class="display-6">JumeirahBeachPark </span></h2>
                      <p class="wow fadeInUp" data-wow-delay=".6s">The UAE is a living canvas where threads of culture, language, and tradition intersect. TEDxJumeirahBeachPark celebrates this vibrant tapestry, inviting you to explore stories from Emiratis, expatriates, and global thinkers. Our speakers, like colorful threads, share their unique perspectives, weaving a narrative of unity and understanding. Let's unravel the beauty of diversity together. </p>
                      <br>
                      <p class="wow fadeInUp" data-wow-delay=".6s">Dubai's skyline is a harmonious blend of innovation and heritage. These architectural marvels mirror the UAE's ethos—a fusion of tradition and modernity. Behind Dubai's architectural allure lies the golden ratio—a mathematical concept that defines beauty. At TEDxJumeirahBeachPark, we explore how mathematics and aesthetics intersect, creating a symphony of balance and allure. </p>
