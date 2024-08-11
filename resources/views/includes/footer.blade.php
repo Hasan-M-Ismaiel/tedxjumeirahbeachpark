@@ -18,16 +18,13 @@
                                 </span>
                                 <ul class="social">
                                     <li>
-                                        <a href="#"><i class="lni lni-facebook-filled"></i></a>
+                                        <a href="https://www.facebook.com/TEDxJumeirahBeachPark" target="_blank"><i class="lni lni-facebook-filled"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="lni lni-twitter-filled"></i></a>
+                                        <a href="https://www.instagram.com/tedx_jumeirahbeachpark/" target="_blank"><i class="lni lni-instagram-filled"></i></a>
                                     </li>
                                     <li>
-                                        <a href="#"><i class="lni lni-instagram-filled"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="lni lni-linkedin-original"></i></a>
+                                        <a href="https://www.linkedin.com/company/tedx-jumeirahbeachpark/" target="_blank"><i class="lni lni-linkedin-original"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -43,6 +40,7 @@
                                     <li><a href="{{ route('register') }}">join us as Speaker</a></li>
                                     <li><a href="{{ route('volunteer') }}">join us as Volunteer</a></li>-->
                                     <li><a href="{{ route('aboutTed') }}">About TED</a></li>
+                                    <li><a href="{{ route('home') }}" >Blog</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->

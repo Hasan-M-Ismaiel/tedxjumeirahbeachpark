@@ -4,7 +4,7 @@
             <div class="col-12">
                 <div class="section-title">
                     <h3 class="wow zoomIn" data-wow-delay=".2s">Core Team</h3>
-                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Meet our Heros</h2>
+                    <h2 class="wow fadeInUp" data-wow-delay=".4s">Meet Our Core Team</h2>
                     <p class="wow fadeInUp" data-wow-delay=".6s">The TEDxJumeirahbeachpark experience is brought to life by a dedicated team of passionate individuals who believe in the power of ideas. Our team members come from diverse backgrounds and share a common drive to create a platform for inspiring conversations.</p>
                 </div>
             </div>

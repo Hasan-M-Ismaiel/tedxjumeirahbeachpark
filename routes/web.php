@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\VolunteerController;
 use App\Http\Controllers\Admin\VolunteerStatusMessageController;
 use App\Http\Controllers\MainHomeController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\PostCommentsController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\SponserStatusMessageController;
 use App\Http\Controllers\StoreFormInformationController;
 use Illuminate\Support\Facades\Route;
@@ -32,6 +34,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
+
+
+
+Route::get('/blog',[PostController::class,'index'])->name('home');
+Route::get('/posts/{post:slug}',[PostController::class,'show']);
+Route::post('/posts/{post:slug}/comments',[PostCommentsController::class,'store']);
+
+Route::post('/storeEmail', [StoreFormInformationController::class, 'storeEmail'])->name('storeEmail');
+
 
 Route::get('/', [MainHomeController::class, 'main'])->name('main');
 Route::get('/aboutTed', [MainHomeController::class, 'aboutTed'])->name('aboutTed');
@@ -57,6 +68,7 @@ Route::post('/storeRegister', [StoreFormInformationController::class, 'storeRegi
 Route::post('/storePartner', [StoreFormInformationController::class, 'storePartner'])->name('storePartner');
 Route::post('/storeVolunteer', [StoreFormInformationController::class, 'storeVolunteer'])->name('storeVolunteer');
 Route::post('/storeOther', [StoreFormInformationController::class, 'storeOther'])->name('storeOther');
+
 
 
 

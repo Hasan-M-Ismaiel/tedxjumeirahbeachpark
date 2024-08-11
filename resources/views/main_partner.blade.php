@@ -13,9 +13,9 @@
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+    <div class="container d-flex justify-content-start">
+        <div class="row ">
+            <div class="col-lg-12 offset-lg-12 col-md-12 col-12">
                 <div class="breadcrumbs-content">
                     <h1 class="page-title">Join Us</h1>
                     <ul class="breadcrumb-nav">
@@ -54,7 +54,7 @@
             <div class="col-12">
                 <div class="section-title mb-0">
                     <div class="button mt-4 ms-0" style="float: center;">
-                        <a href="{{ route('partner_form') }}"  class="btn">Become a partner</a>
+                        <a href="{{ route('partner_form') }}" class="btn">Become a partner</a>
                     </div>
                 </div>
             </div>

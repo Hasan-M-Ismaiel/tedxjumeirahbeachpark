@@ -2,14 +2,10 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 col-12 wow fadeIn" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                <!-- <div class="about-image"> -->
-                    <!-- <div class="video-head wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;"> -->
-                        <!-- <a href="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" class="glightbox video"><i class="lni lni-play"></i></a> -->
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="glightbox video"><i class="lni lni-play"></i></iframe> -->
-                            <iframe width="100%" height="350" src="https://www.youtube.com/embed/wKZoBIdMMA0?si=yET_7Kcq-QCyEjHi" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <!-- </div> -->
-                    <!-- <img src="{{ asset('assets_main/assets/images/about/about-image.jpg') }}" alt="#"> -->
-                <!-- </div> -->
+                <video id="myvideo" width="100%" height="auto" controls>
+                    <source src="{{ asset('assets_main/assets/hero_video/Joinus.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div class="col-lg-6 col-12 wow fadeIn" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeIn;">
                 <div class="content">
@@ -48,7 +44,7 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong class="text-white">Dubai’s position as a global crossroads and its top-tier infrastructure make it a perfect venue for attracting an international audience, enhancing the event’s reach and impact</strong> 
+                                    <strong class="text-white">Dubai’s position as a global crossroads and its top-tier infrastructure make it a perfect venue for attracting an international audience, enhancing the event’s reach and impact</strong>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +56,7 @@
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong class="text-white">With its thriving start-up ecosystem and business-friendly environment, Dubai is a prime location to feature local entrepreneurs and foster professional networks and collaboration.</strong> 
+                                    <strong class="text-white">With its thriving start-up ecosystem and business-friendly environment, Dubai is a prime location to feature local entrepreneurs and foster professional networks and collaboration.</strong>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +68,7 @@
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong class="text-white">The city’s blend of modern luxury and traditional Emirati culture provides a unique backdrop, enriching the TEDx experience with local heritage and contemporary achievements.</strong> 
+                                    <strong class="text-white">The city’s blend of modern luxury and traditional Emirati culture provides a unique backdrop, enriching the TEDx experience with local heritage and contemporary achievements.</strong>
                                 </div>
                             </div>
                         </div>

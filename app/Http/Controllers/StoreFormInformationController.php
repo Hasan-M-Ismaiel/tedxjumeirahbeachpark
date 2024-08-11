@@ -6,6 +6,9 @@ use App\Http\Requests\OtherCreateRequest;
 use App\Http\Requests\PartnerCreateRequest;
 use App\Http\Requests\RegisterCreateRequest;
 use App\Http\Requests\VolunteerCreateRequest;
+use App\Mail\SpeakerConfirmationMail;
+use App\Mail\VolunteerConfirmationMail;
+use App\Models\Email;
 use App\Models\Other;
 use App\Models\Partner;
 use App\Models\Register;
@@ -15,67 +18,70 @@ use App\Notifications\NewOther;
 use App\Notifications\NewPartner;
 use App\Notifications\NewRegister;
 use App\Notifications\NewVolunteer;
+// use Illuminate\Http\Client\Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use RealRashid\SweetAlert\Facades\Alert;
 
 
 class StoreFormInformationController extends Controller
 {
 
-    public function storeRegister (RegisterCreateRequest $request)
+    public function storeRegister(RegisterCreateRequest $request)
     {
         $register = Register::create($request->validated());
-        
-        if($request->question_10){
+
+        if ($request->question_10) {
             $register->question_10 = $request->question_10;
             $register->save();
         }
-        
-        
-        
-        if ($request->hasFile('video'))
-       {
-           
-        $this->validate($request, [
-         'video' => 'file|mimetypes:video/mp4',
-        ]);
-        
-        $path = $request->file('video')->store('speakers_videos', ['disk' =>'my_files']);
-        $register->video_path = $path;
-        
-       }
-       $register->save();
-   
+
+        if ($request->hasFile('video')) {
+
+            $this->validate($request, [
+                'video' => 'file|mimetypes:video/mp4',
+            ]);
+
+            $path = $request->file('video')->store('speakers_videos', ['disk' => 'my_files']);
+            $register->video_path = $path;
+        }
+        $register->save();
+
         Alert::success('Success', 'Your request has been taken, Thank you!');
-        
+
         $users = User::all();
         $user = $users->first();
         $user->notify(new NewRegister($register));
-        
-        return redirect()->back();
 
+        Mail::to($register->email)->send(new SpeakerConfirmationMail([
+            'title' => 'Dear ' . $register->full_name,
+        ]));
+
+
+        return redirect()->back();
     }
 
-    
-    public function storeVolunteer (VolunteerCreateRequest $request)
+
+    public function storeVolunteer(VolunteerCreateRequest $request)
     {
-        $my_string=implode(",",$request->selected_skills);
-        if($request->question_5){
-            $my_string .= ", ".$request->question_5;
+        $my_string = implode(",", $request->selected_skills);
+        if ($request->question_5) {
+            $my_string .= ", " . $request->question_5;
         }
         $volunteer = Volunteer::create([
-            'full_name'         => $request->full_name,           
+            'full_name'         => $request->full_name,
             'email'             => $request->email,
             'phone_number'      => $request->phone_number,
 
             'nationality'       => $request->nationality,
             'residence_country' => $request->residence_country,
-            
+
             'birthday'          => $request->birthday,
             'education'          => $request->education,
             'work'              => $request->work,
             'linkedin_account'  => $request->linkedin_account,
             'other_account'     => $request->other_account,
-            
+
             'question_1'        => $request->question_1,
             'question_2'        => $request->question_2,
             'question_3'        => $request->question_3,
@@ -86,49 +92,51 @@ class StoreFormInformationController extends Controller
             'question_8'        => $request->question_8,
         ]);
 
-        if ($request->hasFile('video'))
-       {
-           
-        $this->validate($request, [
-         'video' => 'file|mimetypes:video/mp4',
-        ]);
-        
-        $path = $request->file('video')->store('volunteers_videos', ['disk' =>'my_files']);
-        $volunteer->video_path = $path;
-        
-       }
-       $volunteer->save();
-       
+        if ($request->hasFile('video')) {
+
+            $this->validate($request, [
+                'video' => 'file|mimetypes:video/mp4',
+            ]);
+
+            $path = $request->file('video')->store('volunteers_videos', ['disk' => 'my_files']);
+            $volunteer->video_path = $path;
+        }
+        $volunteer->save();
+
         Alert::success('Success', 'Your request has been taken, Thank you!');
 
         $users = User::all();
         $user = $users->first();
         $user->notify(new NewVolunteer($volunteer));
 
+        Mail::to($volunteer->email)->send(new VolunteerConfirmationMail([
+            'title' => 'Dear ' . $volunteer->full_name,
+        ]));
+
         return redirect()->back();
     }
 
-    public function storePartner (PartnerCreateRequest $request)
+    public function storePartner(PartnerCreateRequest $request)
     {
 
-        $my_string=implode(",",$request->services);
-        if($request->question_6){
-            $my_string .= ", ".$request->question_6;
+        $my_string = implode(",", $request->services);
+        if ($request->question_6) {
+            $my_string .= ", " . $request->question_6;
         }
         $partner = Partner::create([
-            'full_name'         => $request->full_name,           
+            'full_name'         => $request->full_name,
             'email'             => $request->email,
             'phone_number'      => $request->phone_number,
 
             'nationality'       => $request->nationality,
             'residence_country' => $request->residence_country,
-            
+
             'birthday'          => $request->birthday,
             'education'          => $request->education,
             'work'              => $request->work,
             'linkedin_account'  => $request->linkedin_account,
             'other_account'     => $request->other_account,
-            
+
             'question_1'        => $request->question_1,
 
             'question_2'        => $request->question_2,
@@ -147,22 +155,45 @@ class StoreFormInformationController extends Controller
         $user = $users->first();
         $user->notify(new NewPartner($partner));
 
+        Mail::to($partner->email)->send(new SpeakerConfirmationMail([
+            'title' => 'Dear ' . $partner->full_name,
+        ]));
+
         return redirect()->back();
     }
 
-    public function storeOther (OtherCreateRequest $request)
+    public function storeOther(OtherCreateRequest $request)
     {
         $other = Other::create($request->validated());
-        if($request->question_4){
+        if ($request->question_4) {
             $other->question_4 = $request->question_4;
             $other->save();
         }
-        
+
         Alert::success('Success', 'Your request has been taken, Thank you!');
 
         $users = User::all();
         $user = $users->first();
         $user->notify(new NewOther($other));
+
+        return redirect()->back();
+    }
+
+
+    public function storeEmail(Request $request)
+    {
+        if (! Email::where('email', $request->input('email'))->exists()) {
+            $email = Email::create();
+            $email->email = $request->input('email');
+            $email->save();
+        }
+
+
+        Alert::success('Success', 'Your Email has been registered successfully, Thank you!');
+
+        $users = User::all();
+        $user = $users->first();
+        // $user->notify(new NewOther($email));
 
         return redirect()->back();
     }

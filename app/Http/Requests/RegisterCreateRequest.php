@@ -46,6 +46,7 @@ class RegisterCreateRequest extends FormRequest
             'question_7'                     => ['required', 'string', 'max:1020'],
             'question_8'                     => ['required', 'string', 'max:1020'],
             'question_9'                     => ['required', 'string', 'max:1020'],
+            'video'                          => 'mimes:mp4,mov,ogg,qt | max:20000',
             //'question_10'                    => ['string', 'max:1020'],
 
             // 'event_id' => ['required', Rule::in($events)],

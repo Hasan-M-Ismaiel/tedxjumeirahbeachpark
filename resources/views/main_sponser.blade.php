@@ -13,15 +13,15 @@
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+    <div class="container d-flex justify-content-start">
+        <div class="row ">
+            <div class="col-lg-12 offset-lg-12 col-md-12 col-12">
                 <div class="breadcrumbs-content">
                     <h1 class="page-title">Partners & opinions about us </h1>
-                        <ul class="breadcrumb-nav">
-                            <li><a href="{{ route('main') }}">Home</a></li>
-                            <li>Partners</li>
-                        </ul>
+                    <ul class="breadcrumb-nav">
+                        <li><a href="{{ route('main') }}">Home</a></li>
+                        <li>Partners</li>
+                    </ul>
                 </div>
             </div>
         </div>
