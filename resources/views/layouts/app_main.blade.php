@@ -7,7 +7,7 @@
     <title>TEDx JumierahBeachPark</title>
     <meta name="description" content="JumierahBeachPark, TED, TEDx, talk, event, conference, UAE, dubai, jumeirah, park" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets_main/assets/icons/TED.png') }}" /> -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets_main/assets/icons/16.png') }}" />
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('assets_main/assets/css/bootstrap.min.css') }}" />
@@ -43,6 +43,9 @@
 
     </div>
     <!-- /End Preloader -->
+
+    <!-- <div class="loading" id="loading" style="display: none;">Loading&#8230;</div> -->
+
 
     @include('includes.header')
 
@@ -136,7 +139,7 @@
                     // add an "invalid" class to the field:
                     y[i].className += " invalid";
                     // and set the current valid status to false
-                    valid = true; //this was false, i changed it 
+                    valid = true; //this was false, i changed it
                 }
             }
             // If the valid status is true, mark the step as finished and valid:

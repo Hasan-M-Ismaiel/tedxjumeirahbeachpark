@@ -39,6 +39,7 @@ Auth::routes();
 
 Route::get('/blog',[PostController::class,'index'])->name('home');
 Route::get('/posts/{post:slug}',[PostController::class,'show']);
+Route::get('/posts/ar/{post:slug}',[PostController::class,'showAr']);
 Route::post('/posts/{post:slug}/comments',[PostCommentsController::class,'store']);
 
 Route::post('/storeEmail', [StoreFormInformationController::class, 'storeEmail'])->name('storeEmail');

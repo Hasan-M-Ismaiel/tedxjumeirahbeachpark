@@ -238,9 +238,9 @@
     </div>
 </section>
 <!-- /End Speakers Area -->
-
 <!-- Start Call Action Area -->
 @include('includes.call_action')
+
 <!-- End Call Action Area -->
 
 @endsection

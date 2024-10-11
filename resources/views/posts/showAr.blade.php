@@ -2,24 +2,7 @@
     <section class="px-6 py-8">
         <main class="max-w-6xl mx-auto mt-10 lg:mt-20 space-y-6">
             <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-12 gap-x-10">
-                <div class="col-span-4 lg:text-center lg:pt-14 mb-10">
-                    <img src="{{ asset($post->thumbnail) }}" alt="" class="rounded-xl">
 
-                    <p class="mt-4 block text-gray-400 text-xs">
-                        Published <time> {{$post->created_at->diffForHumans()}} </time>
-                    </p>
-
-                    <div class="flex items-center lg:justify-center text-sm mt-4">
-                        <img src="/images/Tedx-Theme.svg" alt="theme" style="width: 70px;">
-                        <div class="ml-3 text-left">
-                            <a href="{{ route('main') }}">
-                                <span class="text-red-500">TEDx</span>JumeirahBeachPark
-                            </a>
-
-                        </div>
-                    </div>
-
-                </div>
 
                 <div class="col-span-8">
                     <div class="hidden lg:flex justify-between mb-6">
@@ -35,27 +18,41 @@
                                 </g>
                             </svg>
 
-                            Back to Posts
+                            العودة إلى المدونة
                         </a>
 
                         <div class="space-x-2">
                         </div>
                     </div>
 
-
-                    <h1 class="font-bold text-3xl lg:text-4xl mb-10">
+                    <h1 class="font-bold text-3xl lg:text-4xl mb-10" style="text-align: right;">
                         <a href="/posts/{{$post->slug}}">
-                            {{$post->title}}
+                            {{$postar->title}}
                         </a>
-
                     </h1>
-                    <a href="/posts/ar/{{$post->slug}}">
-- اقرأ بالعربي - 
+                    <a href="/posts/{{$post->slug}}">
+- Read in English - 
                     </a>
 
+                    <div class="space-y-4 lg:text-lg leading-loose " style="text-align: right;">
+                        {!! $postar->body !!}
+                    </div>
+                </div>
 
-                    <div class="space-y-4 lg:text-lg leading-loose ">
-                        {!! $post->body !!}
+                <div class="col-span-4 lg:text-center lg:pt-14 mb-10">
+                    <img src="{{ asset($post->thumbnail) }}" alt="" class="rounded-xl">
+
+                    <p class="mt-4 block text-gray-400 text-xs">
+                        Published <time> {{$post->created_at->diffForHumans()}} </time>
+                    </p>
+
+                    <div class="flex items-center lg:justify-center text-sm mt-4">
+                        <img src="/images/Tedx-Theme.svg" alt="theme" style="width: 70px;">
+                        <div class="ml-3 text-left">
+                            <a href="{{ route('main') }}">
+                                <span class="text-red-500">TEDx</span>JumeirahBeachPark
+                            </a>
+                        </div>
                     </div>
                 </div>
 
