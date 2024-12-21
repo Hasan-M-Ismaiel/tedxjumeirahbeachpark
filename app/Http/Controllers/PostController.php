@@ -26,7 +26,7 @@ class PostController extends Controller
             'post' => $post
         ]);
     }
-
+    
     public function showAr(Post $post){
         $postId = $post->id;
         $postar = Postsars::where('id', $postId)->first();

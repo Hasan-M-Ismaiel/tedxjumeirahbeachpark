@@ -11,7 +11,7 @@ use App\Http\Controllers\Admin\RegisterStatusMessageController;
 use App\Http\Controllers\Admin\SpeakerController;
 use App\Http\Controllers\Admin\SpeakerStatusMessageController;
 use App\Http\Controllers\Admin\SponserController;
-use App\Http\Controllers\Admin\UploadController;
+
 use App\Http\Controllers\Admin\VolunteerController;
 use App\Http\Controllers\Admin\VolunteerStatusMessageController;
 use App\Http\Controllers\MainHomeController;
@@ -20,6 +20,7 @@ use App\Http\Controllers\PostCommentsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SponserStatusMessageController;
 use App\Http\Controllers\StoreFormInformationController;
+use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 
+Route::post('/upload', [UploadController::class,'store']);
 
 Route::get('/blog',[PostController::class,'index'])->name('home');
 Route::get('/posts/{post:slug}',[PostController::class,'show']);
@@ -48,6 +50,13 @@ Route::post('/storeEmail', [StoreFormInformationController::class, 'storeEmail']
 Route::get('/', [MainHomeController::class, 'main'])->name('main');
 Route::get('/aboutTed', [MainHomeController::class, 'aboutTed'])->name('aboutTed');
 Route::get('/members', [MainHomeController::class, 'members'])->name('members');
+
+Route::get('/TEDx-event-1', [MainHomeController::class, 'tedx_event_1'])->name('tedx_event_1');
+Route::get('/TEDx-event-2', [MainHomeController::class, 'tedx_event_2'])->name('tedx_event_2');
+
+Route::get('/register-salon-1', [MainHomeController::class, 'register_salon_1'])->name('register_salon_1');
+Route::get('/register-salon-2', [MainHomeController::class, 'register_salon_2'])->name('register_salon_2');
+Route::get('/register-main-event', [MainHomeController::class, 'register_main_event_form'])->name('register_main_event_form');
 
 
 Route::get('/register', [MainHomeController::class, 'register'])->name('register');
@@ -69,6 +78,12 @@ Route::post('/storeRegister', [StoreFormInformationController::class, 'storeRegi
 Route::post('/storePartner', [StoreFormInformationController::class, 'storePartner'])->name('storePartner');
 Route::post('/storeVolunteer', [StoreFormInformationController::class, 'storeVolunteer'])->name('storeVolunteer');
 Route::post('/storeOther', [StoreFormInformationController::class, 'storeOther'])->name('storeOther');
+
+// data 
+Route::post('/storeRegister_salon_1', [StoreFormInformationController::class, 'storeRegister_salon_1'])->name('storeRegister_salon_1');
+Route::post('/storeRegister_salon_2', [StoreFormInformationController::class, 'storeRegister_salon_2'])->name('storeRegister_salon_2');
+Route::post('/storeRegister_main_event', [StoreFormInformationController::class, 'storeRegister_main_event'])->name('storeRegister_main_event');
+
 
 
 

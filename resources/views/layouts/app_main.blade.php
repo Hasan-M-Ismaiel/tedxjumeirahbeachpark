@@ -8,7 +8,7 @@
     <meta name="description" content="JumierahBeachPark, TED, TEDx, talk, event, conference, UAE, dubai, jumeirah, park" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets_main/assets/icons/16.png') }}" />
-
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('assets_main/assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets_main/assets/css/LineIcons.3.0.css') }}" />
@@ -42,6 +42,9 @@
     <div id="preloaderted">
 
     </div>
+    
+    <div class="loading" id="loading" style="display: none;"></div>
+
     <!-- /End Preloader -->
 
     <!-- <div class="loading" id="loading" style="display: none;">Loading&#8230;</div> -->
@@ -121,6 +124,7 @@
             if (currentTab >= x.length) {
                 // ... the form gets submitted:
                 document.getElementById("signUpForm").submit();
+                $('#loading').show();  
                 return false;
             }
             // Otherwise, display the correct tab:
@@ -171,8 +175,10 @@
     <script src="{{ asset('assets_main/assets/carosel/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets_main/assets/carosel/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets_main/assets/carosel/js/main.js') }}"></script>
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
     <!--for the sweet alert-->
     @include('sweetalert::alert')
+    @yield('scripts')
 </body>
 
 </html>

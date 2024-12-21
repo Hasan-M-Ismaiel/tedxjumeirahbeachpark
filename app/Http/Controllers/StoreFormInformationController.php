@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OtherCreateRequest;
 use App\Http\Requests\PartnerCreateRequest;
 use App\Http\Requests\RegisterCreateRequest;
+use App\Http\Requests\SalonFirstRequest;
+use App\Models\SalonFirst;
 use App\Http\Requests\VolunteerCreateRequest;
 use App\Mail\SpeakerConfirmationMail;
 use App\Mail\VolunteerConfirmationMail;
@@ -12,6 +14,7 @@ use App\Models\Email;
 use App\Models\Other;
 use App\Models\Partner;
 use App\Models\Register;
+use App\Models\TemporaryFile;
 use App\Models\User;
 use App\Models\Volunteer;
 use App\Notifications\NewOther;
@@ -29,36 +32,29 @@ class StoreFormInformationController extends Controller
 
     public function storeRegister(RegisterCreateRequest $request)
     {
-        $register = Register::create($request->validated());
+        $temporaryFile = TemporaryFile::where('folder', $request->avatar)->first();
+        if ($temporaryFile) {
+            $register = Register::create($request->validated());
 
-        if ($request->question_10) {
-            $register->question_10 = $request->question_10;
-            $register->save();
+            if ($request->question_10) {
+                $register->question_10 = $request->question_10;
+                $register->save();
+            }
+            Alert::success('Success', 'Your request has been taken, Thank you!');
+    
+            $users = User::all();
+            $user = $users->first();
+            $user->notify(new NewRegister($register));
+    
+            Mail::to($register->email)->send(new SpeakerConfirmationMail([
+                'title' => 'Dear ' . $register->full_name,
+            ]));
+    
+            return redirect()->back();
+        } else {
+            Alert::warning('Error', 'please upload your video!');
+            return redirect()->back();
         }
-
-        if ($request->hasFile('video')) {
-
-            $this->validate($request, [
-                'video' => 'file|mimetypes:video/mp4',
-            ]);
-
-            $path = $request->file('video')->store('speakers_videos', ['disk' => 'my_files']);
-            $register->video_path = $path;
-        }
-        $register->save();
-
-        Alert::success('Success', 'Your request has been taken, Thank you!');
-
-        $users = User::all();
-        $user = $users->first();
-        $user->notify(new NewRegister($register));
-
-        Mail::to($register->email)->send(new SpeakerConfirmationMail([
-            'title' => 'Dear ' . $register->full_name,
-        ]));
-
-
-        return redirect()->back();
     }
 
 
@@ -196,5 +192,72 @@ class StoreFormInformationController extends Controller
         // $user->notify(new NewOther($email));
 
         return redirect()->back();
+    }
+
+    public function storeRegister_salon_1(SalonFirstRequest $request)
+    {
+            $SalonFirst = SalonFirst::create($request->validated());
+
+            Alert::success('Success', 'Your information has been taken, Thank you!');
+    
+            // $users = User::all();
+            // $user = $users->first();
+            // $user->notify(new NewRegister($register));
+
+            return redirect()->back();
+    }
+    
+    public function storeRegister_salon_2(RegisterCreateRequest $request)
+    {
+        $temporaryFile = TemporaryFile::where('folder', $request->avatar)->first();
+        if ($temporaryFile) {
+            $register = Register::create($request->validated());
+
+            if ($request->question_10) {
+                $register->question_10 = $request->question_10;
+                $register->save();
+            }
+            Alert::success('Success', 'Your request has been taken, Thank you!');
+    
+            $users = User::all();
+            $user = $users->first();
+            $user->notify(new NewRegister($register));
+    
+            Mail::to($register->email)->send(new SpeakerConfirmationMail([
+                'title' => 'Dear ' . $register->full_name,
+            ]));
+    
+            return redirect()->back();
+        } else {
+            Alert::warning('Error', 'please upload your video!');
+            return redirect()->back();
+        }
+    }
+
+    public function storeRegister_main_event(RegisterCreateRequest $request)
+    {
+        $temporaryFile = TemporaryFile::where('folder', $request->avatar)->first();
+        if ($temporaryFile) {
+            $register = Register::create($request->validated());
+
+            if ($request->question_10) {
+                $register->question_10 = $request->question_10;
+                $register->save();
+            }
+            Alert::success('Success', 'Your request has been taken, Thank you!');
+    
+            $users = User::all();
+            $user = $users->first();
+            $user->notify(new NewRegister($register));
+    
+            Mail::to($register->email)->send(new SpeakerConfirmationMail([
+                'title' => 'Dear ' . $register->full_name,
+            ]));
+    
+            return redirect()->back();
+        } else {
+            Alert::warning('Error', 'please upload your video!');
+            return redirect()->back();
+        }
     }
 }

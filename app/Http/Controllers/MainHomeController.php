@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class MainHomeController extends Controller
 {
+    
     public function main ()
     {
         //$events = Event::with('speakers', 'sponsers', 'registers', 'members', 'volunteers')->get();
@@ -83,7 +84,6 @@ class MainHomeController extends Controller
         //return view('main_faq');
     }
 
-
     public function aboutTed ()
     {
         //$events = Event::with('speakers', 'sponsers', 'registers', 'members', 'volunteers')->get();
@@ -159,6 +159,47 @@ class MainHomeController extends Controller
         $events = Event::all();
         $event = $events->first();
         return view('volunteer_form', [
+            'event' => $event,
+        ]);
+    }
+
+    public function tedx_event_1 ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('tedx_event_1',['event' => $event]);
+    }
+
+    public function tedx_event_2 ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('tedx_event_2',['event' => $event]);
+    }
+
+    public function register_main_event_form ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('register_main_event_form', [
+            'event' => $event,
+        ]);
+    }
+
+    public function register_salon_1 ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('register_salon_1_form', [
+            'event' => $event,
+        ]);
+    }
+
+    public function register_salon_2 ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('register_salon_2_form', [
             'event' => $event,
         ]);
     }

@@ -46,7 +46,9 @@ class RegisterCreateRequest extends FormRequest
             'question_7'                     => ['required', 'string', 'max:1020'],
             'question_8'                     => ['required', 'string', 'max:1020'],
             'question_9'                     => ['required', 'string', 'max:1020'],
-            'video'                          => 'mimes:mp4,mov,ogg,qt | max:20000',
+            
+            // 'avatar'                        => ['required', 'mimes:mp4,mov,ogg,qt', 'max:50000'],
+            // 'video'                          => 'mimes:mp4,mov,ogg,qt | max:20000',
             //'question_10'                    => ['string', 'max:1020'],
 
             // 'event_id' => ['required', Rule::in($events)],
@@ -65,6 +67,7 @@ class RegisterCreateRequest extends FormRequest
             'question_7.required' => 'you should answer question ~ why should we choose you',
             'question_8.required' => 'you should answer question ~ why do you want to be a speaker',
             'question_9.required' => 'you should answer question ~ please mention your favourit TED or TEDx talk ',
+            'avatar' => 'you should upload video! ',
             //'question_10.required' => 'you should answer question ~ please mention your favourit TED or TEDx talk ',
 
             // 'event_id.required' => 'you should select event for the register'

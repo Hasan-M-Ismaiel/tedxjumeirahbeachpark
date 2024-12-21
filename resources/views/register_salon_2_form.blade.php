@@ -13,14 +13,14 @@
 
 <!-- Start Breadcrumbs -->
 <div class="breadcrumbs">
-    <div class="container d-flex justify-content-start">
-        <div class="row ">
-            <div class="col-lg-12 offset-lg-12 col-md-12 col-12">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 offset-lg-2 col-md-12 col-12 d-flex justify-content-start">
                 <div class="breadcrumbs-content">
-                    <h1 class="page-title">Become a speaker</h1>
+                    <h1 class="page-title">Salon Event</h1>
                     <ul class="breadcrumb-nav">
                         <li><a href="{{ route('main') }}">Home</a></li>
-                        <li>speaker form</li>
+                        <li>Attendance Registration Form</li>
                     </ul>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     @if ($errors->any())
                     <div class="mb-4 mt-4" id="signUpForm">
                         <span class="pe-4 font-medium text-danger border border-danger border-rounded rounded">
-                            <span class="bg-danger py-2 px-2  text-white">Whoops!</span>{{ __(' Refresh the page and fill in all the required fields') }}
+                            <span class="bg-danger py-2 px-2  text-white">Whoops!</span>{{ __(' Something went wrong.') }}
                         </span>
 
                         <ul class="mt-3 list-group list-group-flush text-danger">
@@ -54,9 +54,8 @@
 
                     <!--the form-->
                     <!--<h1 class="text-center fs-4">Form Wizard - Multi Step Form</h1>-->
-                    <form id="signUpForm" class="w-100 rounded-1 p-4 border bg-white" action='{{ route("storeRegister") }}' method="POST" enctype="multipart/form-data">
+                    <form id="signUpForm" class="w-100 rounded-1 p-4 border bg-white" action='{{ route("storeRegister_salon_2") }}' method="POST">
                         @csrf
-
                         <!-- start step indicators -->
                         <div class="form-header d-flex mb-4">
                             <span class="stepIndicator">personal info</span>
@@ -67,11 +66,10 @@
 
                         <!-- step one -->
                         <div class="step">
-
                             <!--first name-->
                             <label class="d-block mb-4">
                                 <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Full name</strong></span>
-                                <input name="full_name" type="text" class="form-control" placeholder="full name" value="{{ old('full_name') }}" required />
+                                <input name="full_name" type="text" class="form-control" placeholder="full name" value="{{ old('full_name') }}" />
                             </label>
 
                             <!--email-->
@@ -83,7 +81,7 @@
                             <!--phone-->
                             <label class="d-block mb-4">
                                 <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Phone number</strong></span>
-                                <input name="phone_number" type="text" class="form-control" placeholder="+971-55-555-5555" value="{{ old('phone_number') }}" />
+                                <input name="phone_number" type="text" class="form-control" placeholder="+971-5555555" value="{{ old('phone_number') }}" />
                             </label>
 
                             <!--nationality-->
@@ -101,7 +99,7 @@
                             <!--birthday-->
                             <label class="d-block mb-4">
                                 <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Birthday</strong></span>
-                                <input name="birthday" type="date" class="form-control" placeholder="00-0-0000" value="{{ old('birthday') }}" />
+                                <input name="birthday" type="date" class="form-control" placeholder="06-0-1900" value="{{ old('birthday') }}" />
                             </label>
 
                             <!--Education-->
@@ -139,12 +137,14 @@
                                             yes
                                         </label>
                                     </div>
+
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="question_1" id="question_1_no" value="no">
                                         <label class="form-check-label" for="question_1_no">
                                             no
                                         </label>
                                     </div>
+
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="question_1" id="question_1_not_sure" value="not sure">
                                         <label class="form-check-label" for="question_1_not_sure">
@@ -158,63 +158,129 @@
                         <!-- step two -->
                         <div class="step">
 
-                            <!--introduce yourself-->
+                            <!--why-->
                             <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Introduce yourself in your own words.</strong></span>
-                                <textarea rows="4" cols="50" name="question_2" type="text" class="form-control" placeholder="I'm ..." value="{{ old('question_2') }}"></textarea>
+                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Why do you want to be a partner at TEDxJumeirahbeachpark?</strong></span>
+                                <textarea rows="4" cols="50" name="question_2" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_2') }}"></textarea>
                             </label>
 
-                            <!--what is your talk idea about?-->
+                            <!--do you have a buisness?-->
                             <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>What is your talk idea?</strong></span>
-                                <input name="question_3" type="text" class="form-control" placeholder="it's about ..." value="{{ old('question_3') }}">
-                            </label>
+                                <div class="form-group">
+                                    <label for="question_3"><span class="me-2 text-danger h6">*</span><strong>Do you have a buisness?</strong></label>
 
-                            <!--idea details-->
-                            <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Speak in detail about your talk's idea and why you feel it is important?</strong></span>
-                                <textarea rows="4" cols="50" name="question_4" type="text" class="form-control" placeholder="" value="{{ old('question_4') }}"></textarea>
-                            </label>
+                                    <!--yes-->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3_yes" value="yes" checked>
+                                        <label class="form-check-label" for="question_3_yes">
+                                            yes
+                                        </label>
+                                    </div>
 
+                                    <!--no-->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3_no" value="no">
+                                        <label class="form-check-label" for="question_3_no">
+                                            no
+                                        </label>
+                                    </div>
 
-                            <!--video-->
-                            <!-- <label class="d-block mb-4">
-                                <span class="form-label d-block"><strong>It is better to record a video answering the previous questions - 3 min at max & 50 MB max size</strong> </span>
-                                <input name="video" type="file" class="form-control" value="{{ old('video') }}">
-                            </label> -->
-
-                            <!--video-->
-                            <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>It is better to record a video answering the previous questions - 3 min at max & 50 MB max size</strong> </span>
-                                <div class="mt-4">
-                                    <input type="file" name="avatar" id="avatar">
+                                    <!-- part of-->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="question_3" id="question_3_part" value="part of buisness">
+                                        <label class="form-check-label" for="question_3_part">
+                                            I'm part of a buisness
+                                        </label>
+                                    </div>
                                 </div>
                             </label>
 
-                            <!--idea message-->
+                            <!--in what field is your business-->
                             <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>What is the message you want to share through your talk?</strong></span>
-                                <textarea rows="4" cols="50" name="question_5" type="text" class="form-control" placeholder="My message is ..." value="{{ old('question_5') }}"></textarea>
+                                <span class="form-label d-block"><strong>What is the field of the mentioned buisness? (if it is there)</strong></span>
+                                <input name="question_4" type="text" class="form-control" placeholder="In..." value="{{ old('question_4') }}">
                             </label>
 
-                            <!--choosing_your_idea-->
+                            <!--in which area you can help?-->
                             <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Why should we choose your idea? </strong></span>
-                                <textarea rows="4" cols="50" name="question_6" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_6') }}"></textarea>
+                                <dive class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>In which area you can offer your services?</strong></dive>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_1" name="services[]" value="Marketing & Design">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Marketing & Design
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_2" name="services[]" value="Web Development">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Web Development
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_3" name="services[]" value="Photograph & Videograph">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Photograph & Videograph
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_4" name="services[]" value="Media Coverage">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Media Coverage
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_5" name="services[]" value="Food & Beverage">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Food & Beverage
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_6" name="services[]" value="Printing Services">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Printing Services
+                                    </label>
+                                </div>
+
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="service_7" name="services[]" value="Tech & Logistics Services">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Tech & Logistics Services
+                                    </label>
+                                </div>
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="skill_18" name="services[]" value="other">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Other:
+                                    </label>
+                                    <input name="question_6" type="text" class="form-control" placeholder="" value="{{ old('question_6') }}">
+                                </div>
                             </label>
 
-                            <!--choosing_your_as_speaker-->
                             <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Why should we choose you as a speaker?</strong></span>
-                                <textarea rows="4" cols="50" name="question_7" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_7') }}"></textarea>
+                                <div class="form-group">
+                                    <label for="question_7"><span class="me-2 text-danger h6">*</span><strong>Have you previously partnered with any non-profit social events?</strong></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="question_7" id="question_7_yes" value="yes" checked>
+                                        <label class="form-check-label" for="question_7_yes">
+                                            yes
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="question_7" id="question_7_no" value="no">
+                                        <label class="form-check-label" for="question_7_no">
+                                            no
+                                        </label>
+                                    </div>
+                                </div>
                             </label>
-
-                            <!--reason-->
-                            <label class="d-block mb-4">
-                                <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Why do you want to be a speaker in TEDxJumeirahbeachpark?</strong></span>
-                                <textarea rows="4" cols="50" name="question_8" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_8') }}"></textarea>
-                            </label>
-
                         </div>
 
                         <!-- step three -->
@@ -222,14 +288,15 @@
                             <!--favourit speaker-->
                             <label class="d-block mb-4">
                                 <span class="form-label d-block"><span class="me-2 text-danger h6">*</span><strong>Please mention your favorite TED or TEDx talk?</strong></span>
-                                <input name="question_9" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_9') }}">
+                                <input name="question_8" type="text" class="form-control" placeholder="Because ..." value="{{ old('quesiton_8') }}">
                             </label>
 
                             <!--notes-->
                             <label class="d-block mb-4">
                                 <span class="form-label d-block"><strong>Please add any notes or comments?</strong></span>
-                                <textarea rows="4" cols="50" name="question_10" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_10') }}"></textarea>
+                                <textarea rows="4" cols="50" name="question_9" type="text" class="form-control" placeholder="Because ..." value="{{ old('question_9') }}"></textarea>
                             </label>
+
                         </div>
 
                         <!-- start previous / next buttons -->
@@ -245,32 +312,9 @@
     </div>
 </section>
 <!-- /End Speakers Area -->
+
 <!-- Start Call Action Area -->
 @include('includes.call_action')
-
 <!-- End Call Action Area -->
-
-@section('scripts')
-<script>
-    const inputElement = document.querySelector('input[id="avatar"]');
-    const pond = FilePond.create(inputElement);
-    FilePond.setOptions({
-        server: {
-            url: '/upload', //this would be the route url we can add it to the web.php 
-            headers: {
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            }
-        },
-    });
-</script>
-<script>
-    function logSubmit(event) {
-        alert();
-    }
-    const form = document.getElementById("signUpForm");
-    form.addEventListener("submit", logSubmit);
-</script>
-
-@endsection
 
 @endsection
