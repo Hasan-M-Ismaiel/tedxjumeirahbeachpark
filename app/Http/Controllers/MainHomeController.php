@@ -177,6 +177,15 @@ class MainHomeController extends Controller
         return view('tedx_event_2',['event' => $event]);
     }
 
+    // main registeration form 
+    public function tedx_main_event ()
+    {
+        $events = Event::all();
+        $event = $events->first();
+        return view('register_main_event_form',['event' => $event]);
+    }
+
+    // not used
     public function register_main_event_form ()
     {
         $events = Event::all();

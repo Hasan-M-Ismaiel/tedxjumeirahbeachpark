@@ -42,7 +42,7 @@
     <div id="preloaderted">
 
     </div>
-    
+
     <div class="loading" id="loading" style="display: none;"></div>
 
     <!-- /End Preloader -->
@@ -124,7 +124,7 @@
             if (currentTab >= x.length) {
                 // ... the form gets submitted:
                 document.getElementById("signUpForm").submit();
-                $('#loading').show();  
+                $('#loading').show();
                 return false;
             }
             // Otherwise, display the correct tab:
@@ -168,6 +168,29 @@
         window.addEventListener("load", function() {
             loader.style.display = 'none';
         });
+    </script>
+
+    <script>
+        const startYear = 1900; // Adjust as needed
+        const endYear = new Date().getFullYear(); // Current year
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownButton = document.getElementById('yearDropdown');
+        const hiddenInput = document.getElementById('selectedYearInput');
+
+        // Populate dropdown with years
+        for (let year = startYear; year <= endYear; year++) {
+            const yearItem = document.createElement('div');
+            yearItem.className = 'dropdown-item';
+            yearItem.textContent = year;
+            yearItem.style.cursor = 'pointer';
+
+            yearItem.addEventListener('click', function() {
+                dropdownButton.textContent = year; // Update button text
+                hiddenInput.value = year; // Update hidden input value
+            });
+
+            dropdownMenu.appendChild(yearItem);
+        }
     </script>
 
     <script src="{{ asset('assets_main/assets/carosel/js/jquery.min.js') }}"></script>

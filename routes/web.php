@@ -53,6 +53,7 @@ Route::get('/members', [MainHomeController::class, 'members'])->name('members');
 
 Route::get('/TEDx-event-1', [MainHomeController::class, 'tedx_event_1'])->name('tedx_event_1');
 Route::get('/TEDx-event-2', [MainHomeController::class, 'tedx_event_2'])->name('tedx_event_2');
+Route::get('/TEDx-main-event', [MainHomeController::class, 'tedx_main_event'])->name('tedx_main_event');
 
 Route::get('/register-salon-1', [MainHomeController::class, 'register_salon_1'])->name('register_salon_1');
 Route::get('/register-salon-2', [MainHomeController::class, 'register_salon_2'])->name('register_salon_2');

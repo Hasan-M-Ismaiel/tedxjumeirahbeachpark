@@ -32,7 +32,7 @@
                         <div class="col-12">
                             <div class="section-title mb-0">
                                 <div class="button mt-4 ms-0" style="float: center;">
-                                    <a href="{{ route('register_main_event_form') }}" class="btn" >Pre-register Now !</a>
+                                    <a href="{{ route('tedx_main_event') }}" class="btn" >Pre-register Now !</a>
                                 </div>
                             </div>
                         </div>

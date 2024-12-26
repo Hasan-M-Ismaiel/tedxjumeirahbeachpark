@@ -4396,3 +4396,27 @@ only screen and (min-width: 1400px) {
     transform: rotate(1turn)
   }
 }
+
+.dropdown-menu-scrollable {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+.dropdown-toggle {
+  background-color: #f03355 !important;  /* Set background color */
+  border-color: #f03355 !important;      /* Set border color */
+  color: white !important;               /* Set text color */
+}
+
+.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(240, 51, 85, 0.25) !important; /* Focus effect */
+}
+
+.dropdown-item:hover {
+  background-color: #f03355 !important; /* Set hover background color */
+  color: white !important;              /* Set hover text color */
+}
+
+.dropdown-menu {
+  border: 1px solid #f03355 !important; /* Set border color */
+}

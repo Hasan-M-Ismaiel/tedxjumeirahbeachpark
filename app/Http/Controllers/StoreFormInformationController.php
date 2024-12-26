@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\MainEventRequest;
 use App\Http\Requests\OtherCreateRequest;
 use App\Http\Requests\PartnerCreateRequest;
 use App\Http\Requests\RegisterCreateRequest;
@@ -11,6 +12,7 @@ use App\Http\Requests\VolunteerCreateRequest;
 use App\Mail\SpeakerConfirmationMail;
 use App\Mail\VolunteerConfirmationMail;
 use App\Models\Email;
+use App\Models\MainEvent;
 use App\Models\Other;
 use App\Models\Partner;
 use App\Models\Register;
@@ -199,10 +201,6 @@ class StoreFormInformationController extends Controller
             $SalonFirst = SalonFirst::create($request->validated());
 
             Alert::success('Success', 'Your information has been taken, Thank you!');
-    
-            // $users = User::all();
-            // $user = $users->first();
-            // $user->notify(new NewRegister($register));
 
             return redirect()->back();
     }
@@ -234,30 +232,30 @@ class StoreFormInformationController extends Controller
         }
     }
 
-    public function storeRegister_main_event(RegisterCreateRequest $request)
+    public function storeRegister_main_event(MainEventRequest $request)
     {
-        $temporaryFile = TemporaryFile::where('folder', $request->avatar)->first();
-        if ($temporaryFile) {
-            $register = Register::create($request->validated());
-
-            if ($request->question_10) {
-                $register->question_10 = $request->question_10;
-                $register->save();
-            }
-            Alert::success('Success', 'Your request has been taken, Thank you!');
-    
-            $users = User::all();
-            $user = $users->first();
-            $user->notify(new NewRegister($register));
-    
-            Mail::to($register->email)->send(new SpeakerConfirmationMail([
-                'title' => 'Dear ' . $register->full_name,
-            ]));
-    
-            return redirect()->back();
-        } else {
-            Alert::warning('Error', 'please upload your video!');
-            return redirect()->back();
+        $my_string = implode(",", $request->selected_options);
+        if ($request->question_5_options) {
+            $my_string .= ", " . $request->question_5_options;
         }
+
+        $MainEvent = MainEvent::create([
+            'full_name'        => $request->full_name,
+            'email'            => $request->email,
+            'phone_number'     => $request->phone_number,
+
+            'country'          => $request->country,
+            'city'             => $request->city,
+            'birthday'         => $request->selected_year,
+            'education'        => $request->education,
+            'work'             => $request->work,
+            'selected_options' => $my_string,
+            'industry'         => $request->industry,
+            'why'              => $request->why,
+        ]);
+
+        Alert::success('Success', 'Your information has been taken, Thank you!');
+
+        return redirect()->back();
     }
 }
