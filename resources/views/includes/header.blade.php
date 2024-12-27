@@ -20,7 +20,7 @@
                                     <a href="{{ route('main') }}" aria-label="Toggle navigation">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">TEDx Salons</a>
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Salons</a>
                                     <ul class="sub-menu collapse" id="submenu-1-2">
                                         <li class="nav-item"><a href="{{ route('tedx_event_1') }}">TEDx - navigating space</a></li>
                                         <!-- <li class="nav-item"><a href="{{ route('tedx_event_2') }}">TEDx Event 2</a></li> -->
@@ -44,10 +44,6 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a a href="{{ route('home') }}" aria-label="Toggle navigation">Blog</a>
-                                </li>
-
-                                <li class="nav-item">
                                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">Join Us</a>
                                     <ul class="sub-menu collapse" id="submenu-1-2">
                                         <li class="nav-item"><a href="{{ route('register') }}">Speakers</a></li>
@@ -55,11 +51,14 @@
                                         <li class="nav-item"><a href="{{ route('partner') }}">Partners</a></li>
                                     </ul>
                                 </li>
-                                <!--<li class="nav-item">
-                                    <a href="{{ route('faq') }}" aria-label="Toggle navigation">Be in Event</a>
-                                </li>-->
+                                
                                 <li class="nav-item">
-                                    <a href="#footer" aria-label="Toggle navigation">Contact</a>
+                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">More</a>
+                                    <ul class="sub-menu collapse" id="submenu-1-2">
+                                        <li class="nav-item"><a href="{{ route('home') }}">Blog</a></li>
+                                        <li class="nav-item"><a href="{{ route('podcasts') }}">Podcasts</a></li>
+                                        <li class="nav-item"><a href="#footer">Contact</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div> <!-- navbar collapse -->

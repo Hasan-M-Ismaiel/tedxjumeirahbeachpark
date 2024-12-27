@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\VolunteerController;
 use App\Http\Controllers\Admin\VolunteerStatusMessageController;
 use App\Http\Controllers\MainHomeController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\PostCommentsController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SponserStatusMessageController;
@@ -39,7 +40,11 @@ Auth::routes();
 
 Route::post('/upload', [UploadController::class,'store']);
 
+
+Route::get('/podcasts',[PodcastController::class,'index'])->name('podcasts');
+
 Route::get('/blog',[PostController::class,'index'])->name('home');
+
 Route::get('/posts/{post:slug}',[PostController::class,'show']);
 Route::get('/posts/ar/{post:slug}',[PostController::class,'showAr']);
 Route::post('/posts/{post:slug}/comments',[PostCommentsController::class,'store']);

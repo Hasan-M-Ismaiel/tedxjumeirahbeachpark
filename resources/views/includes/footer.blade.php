@@ -41,6 +41,7 @@
                                     <li><a href="{{ route('volunteer') }}">join us as Volunteer</a></li>-->
                                     <li><a href="{{ route('aboutTed') }}">About TED</a></li>
                                     <li><a href="{{ route('home') }}" >Blog</a></li>
+                                    <li><a href="{{ route('podcasts') }}" >Podcasts</a></li>
                                 </ul>
                             </div>
                             <!-- End Single Widget -->
